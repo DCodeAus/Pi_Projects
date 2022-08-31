@@ -24,7 +24,7 @@ COURIER_FONT = RESOURCES + "fonts/Courierprime.ttf"
 API_ENDPOINT = "https://api.kraken.com/0/public/Ticker"
 DP = "{:.2f}" #change the value for the required decimal places
 
-inky_display = InkyPHAT("red")
+inky_display = auto(ask_user=True, verbose=True)
 inky_display.set_border(inky_display.WHITE)
 
 # Parsing flip arguments
