@@ -53,8 +53,8 @@ if args.pair is not None:
     CURRENCYEXTRACT = str.upper(args.pair)[-3:]
     CURRENCYSYMBOL = findCurrency(CURRENCYEXTRACT)
 else:
-    COIN = "XXBTZUSD"
-    CURRENCYEXTRACT = "USD"
+    COIN = "BTCAUD"
+    CURRENCYEXTRACT = "AUD"
     CURRENCYSYMBOL = "$"
 
 #GET ERROR
