@@ -1,7 +1,7 @@
-# /usr/bin/python3
-# bitcoin_ticker v1.1
+# bitcoin_ticker v1.2
 # Naviavia - https://github.com/naviavia/bitcoin_ticker
 #!/usr/bin/env python3
+
 import argparse
 import requests
 import json
@@ -10,11 +10,7 @@ from inky.auto import auto
 import os
 from font_fredoka_one import FredokaOne
 import datetime
-
 from PIL import Image, ImageFont, ImageDraw
-from font_hanken_grotesk import HankenGroteskBold, HankenGroteskMedium
-from font_intuitive import Intuitive
-
 
 #Variables
 CURR_DIR = os.path.dirname(os.path.realpath(__file__)) + "/"
@@ -53,8 +49,8 @@ if args.pair is not None:
     CURRENCYEXTRACT = str.upper(args.pair)[-3:]
     CURRENCYSYMBOL = findCurrency(CURRENCYEXTRACT)
 else:
-    COIN = "BTCAUD"
-    CURRENCYEXTRACT = "AUD"
+    COIN = "XXBTZUSD"
+    CURRENCYEXTRACT = "USD"
     CURRENCYSYMBOL = "$"
 
 #GET ERROR
@@ -144,7 +140,7 @@ if len(getError())==0:
     COINPRICE = float(getCoinPrice())
     NUMBER_WITH_COMMAS = "{:,}".format(COINPRICE)
 
-#Flip screen is true arguement passed
+#Flip screen is true argument passed
 if args.flip == "true":
     inky_display.h_flip = True
     inky_display.v_flip = True
