@@ -17,7 +17,10 @@ The bitcoin ticker has been configured with the Kraken API, and refreshes the sc
 ```
 curl https://get.pimoroni.com/inky | bash
 
-- If you get an error regarding externally managed packages, then you will need to just move the file (this helps in case you need to move back the file to the original location), do this by running 'sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
+```
+If you get an error regarding externally managed packages, then you will need to just move the file (this helps in case you need to move back the file to the original location), do this by running 
+```
+'sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.old
 ```
 - Reboot the Pi
 - Download the bitcoin_ticker code to a directory
@@ -30,7 +33,7 @@ crontab -e
 ```
 - Add the below entry (5 represents the frequency of the task e.g. updating to 1 will run every minute, add running variables if required to switch currencies or keep the screen flipped)
 ```
-*/5 * * * * python3 /home/pi/bitcoin_ticker/bitcoin.py
+*/5 * * * * python3 /home/___YOUR Pi's name___/Pi_Projects/bitcoin_ticker/bitcoin.py
 ```
 Make sure the above path is pointing to the folder you've downloaded the code to
 
